@@ -53,8 +53,8 @@ const appRoutes: Routes = [
     FileUploadComponent,
     ProgressComponent,
     NewGameComponent,
-    StartGameComponent
-    BotuploadComponent,
+    StartGameComponent,
+    BotuploadComponent
   ],
   imports: [
     BrowserModule,
