@@ -94,7 +94,7 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatProgressBarModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
