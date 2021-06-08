@@ -31,7 +31,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { LoginPageComponent } from './login/login-page/login-page.component';
 import { AdminPanelComponent } from './admin/admin-panel/admin-panel.component'; 
-
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'; 
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'main', pathMatch: 'full' },
@@ -87,7 +87,8 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatProgressSpinnerModule
   ],
   providers: [   
   ],
