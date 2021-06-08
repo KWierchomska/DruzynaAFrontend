@@ -32,6 +32,12 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { LoginPageComponent } from './login/login-page/login-page.component';
 import { AdminPanelComponent } from './admin/admin-panel/admin-panel.component'; 
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'; 
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatRippleModule } from '@angular/material/core';
+import {MatIconModule} from '@angular/material/icon';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'main', pathMatch: 'full' },
@@ -89,6 +95,20 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     MatProgressBarModule,
     MatProgressSpinnerModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRippleModule,
+    MatIconModule,
+    MatTooltipModule
+  ],
+  exports: [
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRippleModule,
+    MatIconModule,
+    MatTooltipModule
   ],
   providers: [   
   ],

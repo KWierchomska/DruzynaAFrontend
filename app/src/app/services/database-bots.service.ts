@@ -1,4 +1,4 @@
-import { HttpClient, HttpEventType, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpEventType, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Bot } from '../objects/botInterface';
@@ -55,6 +55,9 @@ export class DatabaseBotsService {
     
     var postRetrun = this.httpClient.post<any>(this.SERVER_URL, this.formData(backendBot), httpOptions).subscribe(res =>{
       console.log(res)
+      window.alert("upload successful")
+      this.router.navigate(['queue/', bot.queueId])
+
       // switch (res.type) {
       //   case HttpEventType.Sent:
       //     console.log('Request has been made!');
@@ -66,9 +69,13 @@ export class DatabaseBotsService {
       //     console.log('Bot successfully created!', res.body);
       //     alert("Bot successfully added!")
       // }
-      // this.router.navigate(['/queue', bot.queueId])
+      window.alert("Dodano bota pomyślnie")
+      this.router.navigate(['/queue', bot.queueId])
 
-    });
+    }, (err: HttpErrorResponse) => {
+      window.alert("Sorry there must be some problems with server. Try again later\n" + err)
+
+    } );
 
     // console.log(postRetrun)
 
